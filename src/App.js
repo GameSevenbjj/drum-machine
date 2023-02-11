@@ -14,7 +14,7 @@ function App() {
   function playSound(selector, id) {
     const audio = document.getElementById(selector);
     audio.play();
-    setDisplayKey(selector, id);
+    setDisplayKey(id);
     console.log(audio);
   }
 
