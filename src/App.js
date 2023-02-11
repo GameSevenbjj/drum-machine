@@ -4,6 +4,7 @@ import Buttons from "./Components/Buttons";
 import Switch from "./Components/Switch";
 import Screen from "./Components/Screen";
 import { useEffect, useState } from "react";
+import GithubCorner from "react-github-corner";
 
 function App() {
   const [displayKey, setDisplayKey] = useState("Click a Button!");
@@ -103,6 +104,7 @@ function App() {
         <Switch enabled={enabled} setPowerState={setPowerState} />
         <Buttons enabled={enabled} sounds={sounds} playSound={playSound} />
       </div>
+      <GithubCorner href="https://github.com/GameSevenbjj/drum-machine" />
     </div>
   );
 }
