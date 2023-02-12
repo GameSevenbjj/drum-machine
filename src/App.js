@@ -11,17 +11,17 @@ function App() {
 
   const [enabled, setEnabled] = useState(false);
 
-  function playSound(selector, id) {
+  function playSound(selector, id, key) {
     const audio = document.getElementById(selector);
     audio.play();
-    setDisplayKey(id);
+    setDisplayKey(id, key);
     console.log(audio);
   }
 
   useEffect(() => {
     const myListener = (event) => {
-      playSound(event.key.toUpperCase());
-      console.log(playSound(event.key.toUpperCase()));
+      let song = sounds.find((sound) => sound.key === event.key.toUpperCase());
+      playSound(event.key.toUpperCase(), song.id);
     };
 
     if (enabled) {
